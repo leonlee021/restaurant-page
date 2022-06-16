@@ -3,7 +3,10 @@ const createMenuContent = (() => {
     const content = document.querySelector('.tabs-content');
     const menupageContent = document.createElement('div');
     menupageContent.setAttribute('id','menu');
+    menupageContent.setAttribute('role','tabpanel');
+    menupageContent.ariaLabel = "menu-label";
     menupageContent.classList.add("page");
+    menupageContent.ariaHidden = "true";
     menupageContent.innerHTML = `
     <div class = "lyrics"> Yeah, stylin' though
     Dissin', but got pictures with me smilin' though

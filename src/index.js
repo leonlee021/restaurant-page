@@ -25,25 +25,30 @@ import createMenuContent from './menu';
 //     )
 // )
 
-const burger = document.querySelector(".hamburger");
-
-//Hamburger menu
-burger.addEventListener("click", () => {
-  document.querySelector("ul").classList.toggle("active");
-  burger.classList.toggle("toggle");
-});
-
-const tabs = document.querySelectorAll("[data-tab-target]");
-const tabContents = document.querySelectorAll("[data-tab-content]");
+const tabs = document.querySelectorAll(".tab-button");
+const tabContents = document.querySelectorAll(".page");
 // const tabContentContainer = document.querySelector('#tabs-content');
 
-tabs.forEach((tab) =>
-  tab.addEventListener("click", () => {
-    // const target = document.querySelector(tab.dataset.tabTarget);
-    tabs.forEach((tab) => {
-      tab.classList.remove("is-active");
-    });
-    tab.classList.add("is-active");
-    // target.classList.add("active");
-  })
-);
+tabs.forEach((tab, index) => 
+    tab.addEventListener('click',() => {
+      tabContents.forEach((tabContent) => {
+        tabContent.classList.remove("is-active");
+      })
+        // const target = document.querySelector(tab.datset.tabTarget);
+        // tabContents.forEach((tabContent) => {
+        //     tabContent.classList.remove("is-active");
+        //     tabContent.ariaHidden = "true";
+        // });
+        tabs.forEach((tab)=> {
+            tab.classList.remove("is-active");
+            // tab.ariaSelected = "false";
+        });
+        tabs[index].classList.add("is-active");
+        tabContents[index].classList.add("is-active");
+        
+        // target.ariaHidden = "false";
+        // target.classList.add("is-active");
+        // tab.ariaSelected = "true";
+    }
+    )
+)

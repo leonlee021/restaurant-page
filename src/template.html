@@ -11,16 +11,17 @@
   </head>
   <body class="content"></body>
     <h1>Lemon Pepper Freestyle</h1>
-    <div id = "tabs">
-        <a href="#" class="hamburger">
-            <span class="line line1"></span>
-            <span class="line line2"></span>
-            <span class="line line3"></span>
-        </a>
-        <ul class = "tabs" data-tabs id = "header-tabs">
-            <li class = "tab-button is-active" data-tab-target = "#home"><a href = "#home" aria-selected = "true"> Home </a></li>
-            <li class = "tab-button" data-tab-target = "#menu"><a href = "#menu"> Menu </a></li>
-            <li class = "tab-button" data-tab-target = "#contactus"><a href = "#contactus"> Contact us </a></li>
+    <div id = "tabs-container">
+        <ul class = "tabs" data-tabs = "4236ah-tabs" id = "header-tabs" role="tablist">
+            <li class = "tab-button is-active" role = "presentation">
+              <a href = "#home" aria-selected="true" role="tab" aria-controls="home" id="home-label" class = "tab-button-child"> Home </a>
+            </li>
+            <li class = "tab-button" role = "presentation">
+              <a href = "#menu" aria-selected="false" role="tab" aria-controls="menu" id="menu-label" class = "tab-button-child"> Menu </a>
+            </li>
+            <li class = "tab-button" role = "presentation">
+              <a href = "#contactus" aria-selected="false" role="tab" aria-controls="contactus" id="contactus-label" class = "tab-button-child"> Contact us </a>
+            </li>
         </ul>
         <div class = "tabs-content" data-tabs-content = "header-tabs">
         </div>
